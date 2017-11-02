@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D7E0ADD-AFFF-4D4E-A0E2-05D80B5078F9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PL_ModernUI</RootNamespace>
+    <AssemblyName>PL_ModernUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirstFloor.ModernUI, Version=1.0.9.0, Culture=neutral, PublicKeyToken=bc9b0c37bf06c6a9, processorArchitecture=MSIL">
+      <HintPath>..\packages\ModernUI.WPF.1.0.9\lib\net45\FirstFloor.ModernUI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SciChart.Wpf.UI.Transitionz, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SciChart.Wpf.UI.Transitionz.1.0.4\lib\net45\SciChart.Wpf.UI.Transitionz.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Animations.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractAddPage.xaml.cs">
+      <DependentUpon>ContractAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\ContractEditPage.xaml.cs">
+      <DependentUpon>ContractEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\ContractGroupingPage.xaml.cs">
+      <DependentUpon>ContractGroupingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\ContractRemovePage.xaml.cs">
+      <DependentUpon>ContractRemovePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\AddToRangeConverter.cs" />
+    <Compile Include="Converters\IdToEmployeeConverter.cs" />
+    <Compile Include="Employee\EmployeeAddPage.xaml.cs">
+      <DependentUpon>EmployeeAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EmployeeEditPage.xaml.cs">
+      <DependentUpon>EmployeeEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EmployeeGroupingPage.xaml.cs">
+      <DependentUpon>EmployeeGroupingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EmployeeRemovePage.xaml.cs">
+      <DependentUpon>EmployeeRemovePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\IdToEmployerConverter.cs" />
+    <Compile Include="Employer\EmployerAddPage.xaml.cs">
+      <DependentUpon>EmployerAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employer\EmployerEditPage.xaml.cs">
+      <DependentUpon>EmployerEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employer\EmployerGroupingPage.xaml.cs">
+      <DependentUpon>EmployerGroupingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employer\EmployerRemovePage.xaml.cs">
+      <DependentUpon>EmployerRemovePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\IdToEmployeeNameConverter.cs" />
+    <Compile Include="Converters\IdToEmployerNameConverter.cs" />
+    <Compile Include="Converters\IdToSpecializationConverter.cs" />
+    <Compile Include="Introduction.xaml.cs">
+      <DependentUpon>Introduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\NotBooleanToVisibilityConverter.cs" />
+    <Compile Include="Specialization\SpecializationAddPage.xaml.cs">
+      <DependentUpon>SpecializationAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Specialization\SpecializationEditPage.xaml.cs">
+      <DependentUpon>SpecializationEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Specialization\SpecializationGroupingPage.xaml.cs">
+      <DependentUpon>SpecializationGroupingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Specialization\SpecializationRemovePage.xaml.cs">
+      <DependentUpon>SpecializationRemovePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Specialization\SpecializationTabView.xaml.cs">
+      <DependentUpon>SpecializationTabView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Contract\ContractAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Contract\ContractEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Contract\ContractGroupingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Contract\ContractRemovePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Contract\ContractTabView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee\EmployeeAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee\EmployeeEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee\EmployeeGroupingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee\EmployeeRemovePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee\EmployeeTabView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employer\EmployerAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employer\EmployerEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employer\EmployerGroupingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employer\EmployerRemovePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employer\EmployerTabView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Introduction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Contract\ContractTabView.xaml.cs">
+      <DependentUpon>ContractTabView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EmployeeTabView.xaml.cs">
+      <DependentUpon>EmployeeTabView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employer\EmployerTabView.xaml.cs">
+      <DependentUpon>EmployerTabView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Page Include="Specialization\SpecializationAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Specialization\SpecializationEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Specialization\SpecializationGroupingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Specialization\SpecializationRemovePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Specialization\SpecializationTabView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="הסבר הדברים השווים.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{86fa10b9-0052-4a08-bc9a-1ebf6c32742a}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{a256db9e-1934-46c7-9375-b14d35ab808d}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

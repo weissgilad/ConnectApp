@@ -1,0 +1,15 @@
+﻿<Window x:Class="PL.RemoveSpecializationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="RemoveSpecializationWindow" Height="135" Width="136" WindowStyle="None">
+    <Grid>
+        <Label x:Name="removelabel" Content="Select Specialization:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,5,0,0"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Width="102"/>
+        <Button x:Name="removebutton" Content="Remove" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="102" Click="removebutton_Click"/>
+        <Button x:Name="closebutton" Content="Close" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Width="102" Click="closebutton_Click"/>
+    </Grid>
+</Window>

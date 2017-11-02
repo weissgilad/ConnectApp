@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="PL_ModernUI.Specialization.SpecializationTabView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Style="{StaticResource ContentRoot}">
+        <!-- TODO: set @SelectedSource -->
+        <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="appbar_user">
+            <Path  Opacity="0.05" Width="500" Height="500" Canvas.Right="0" Canvas.Bottom="0" Stretch="Fill" Fill="DarkCyan" Data="F1 M 37.2083,15.8334C 46.7083,19 35.625,20.5833 41.1667,25.3333L 52.25,25.3334L 52.25,36.4167C 57,41.9584 58.5833,30.875 61.75,40.375C 58.5833,49.875 57,38.7917 52.25,44.3334L 52.25,57L 41.1667,57C 35.625,52.25 46.7083,50.6667 37.2083,47.5C 27.7083,50.6667 38.7917,52.25 33.25,57L 20.5833,57L 20.5833,44.3333C 25.3333,38.7917 26.9167,49.875 30.0833,40.375C 26.9167,30.875 25.3333,41.9583 20.5833,36.4167L 20.5833,25.3333L 33.25,25.3333C 38.7916,20.5833 27.7083,19 37.2083,15.8334 Z"/>
+        </Canvas>
+        <Border Width="{Binding ElementName=appbar_user, Path=ActualWidth}" Height="{Binding ElementName=appbar_user, Path=ActualHeight}">
+            <Border.Style>
+                <Style TargetType="Border">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding SelectedSource, ElementName=modernTab}" Value="{x:Null}">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+            <StackPanel>
+                <Canvas Height="15">
+                    <Path Width="28" Height="39.25" Opacity="0.2" Canvas.Right="256" Stretch="Fill" Fill="DarkCyan" Data="F1 M 34,57L 42,57L 42,32.25L 52,42.25L 52,31.75L 38,17.75L 24,31.75L 24,42.25L 34,32.25L 34,57 Z "/>
+                </Canvas>
+                <TextBlock Text="Pick something, it worth it!" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,30,0" Foreground="DarkCyan" Opacity="0.2" FontSize="72" FontWeight="ExtraBold">
+
+                </TextBlock>
+            </StackPanel>
+        </Border>
+        <mui:ModernTab x:Name="modernTab" Layout="Tab">
+            <mui:ModernTab.Links>
+                <!-- TODO: set @Source -->
+                <mui:Link DisplayName="Add" Source="/Specialization/SpecializationAddPage.xaml"  />
+                <mui:Link DisplayName="Edit" Source="/Specialization/SpecializationEditPage.xaml" />
+                <mui:Link DisplayName="Remove" Source="/Specialization/SpecializationRemovePage.xaml"/>
+                <mui:Link DisplayName="Grouping" Source="/Specialization/SpecializationGroupingPage.xaml"/>
+            </mui:ModernTab.Links>
+        </mui:ModernTab>
+    </Grid>
+</UserControl>

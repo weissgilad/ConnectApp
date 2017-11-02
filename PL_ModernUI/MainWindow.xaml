@@ -1,0 +1,40 @@
+﻿<mui:ModernWindow x:Class="PL_ModernUI.MainWindow"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+                  ContentSource="/Introduction.xaml"
+                  Title="Connect Them All inc." Height="705" Width="1080"  Language="en-IL" WindowStartupLocation="CenterScreen" IsTitleVisible="True"  >
+
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="Welcome     ">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Introduction" Source="/Introduction.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+
+        <mui:LinkGroup DisplayName="Employee">
+            <mui:LinkGroup.Links>
+                <mui:Link  Source="/Employee/EmployeeTabView.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+
+        <mui:LinkGroup DisplayName="Employer">
+            <mui:LinkGroup.Links>
+                <mui:Link  Source="/Employer/EmployerTabView.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+
+        <mui:LinkGroup DisplayName="Contract">
+        <mui:LinkGroup.Links>
+            <mui:Link  Source="/Contract/ContractTabView.xaml" />
+        </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+
+        <mui:LinkGroup DisplayName="Specialization">
+            <mui:LinkGroup.Links>
+                <mui:Link  Source="/Specialization/SpecializationTabView.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+    
+</mui:ModernWindow>
